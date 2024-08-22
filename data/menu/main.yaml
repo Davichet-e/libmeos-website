@@ -5,41 +5,62 @@ main:
     sub:
       - name: About
         ref: "/"
-      - name: Installation
-        ref: "/project/installation"
       - name: Licence
         ref: "/project/licence"
+      - name: Code of Conduct
+        ref: "/project/codeofconduct"
+  - name: Getting Started
+    sub:
+      - name: Installation
+        ref: "/gettingstarted/installation"
+      - name: Quick start
+        ref: "/gettingstarted/quickstart"
+      - name: FAQ
+        ref: "/gettingstarted/faq"
+  - name: Core concepts
+    sub:
+      - name: Temporal Types
+        ref: "/coreconcepts/temporaltypes.md"
+        sub:
+            - name: Interpolation
+              ref: "/coreconcepts/interpolation"
+            - name: Normalization
+              ref: "/coreconcepts/normalization"
+      - name: Bounding Boxes
+        ref: "/coreconcepts/boundingboxes"
+      - name: Collection types
+        ref: "/coreconcepts/collectiontypes"
+      - name: Moving Features Formats
+        ref: "/movingfeaturesformats/"
+        sub:
+            - name: Well-Known Text (WKT)
+              ref: "/movingfeaturesformats/wkt"
+            - name: Well-Known Binary (WKB)
+              ref: "/movingfeaturesformats/wkb"
+            - name: Moving-Features JSON (MF-JSON)
+              ref: "/movingfeaturesformats/mfjson"
+  - name: Cookbook
+    ref: "/cookbook/"
+  # - name: Features
+  #   ref: "/features/"
+  #   sub:
+  #     - name: Creating a tpoint
+  #       ref: "/features/tpoint"
+  #     - name: Reading a trajectory
+  #       ref: "/features/readingtrajectory"
+  #     - name: Calculating statistics
+  #       ref: "/features/statistics"
   - name: Bindings
     ref: "/bindings/"
     sub:
       - name: PyMEOS
         ref: "/bindings/pymeos"
-  - name: Documentation
-    # ref: "/documentation"
+  - name: Internals
     sub:
-      - name: Data Model
-        ref: "/documentation/datamodel"
-      - name: Normalization
-        ref: "/documentation/normalization"
-      - name: Data Structures
-        ref: "/documentation/datastructures"
-      - name: Modification operations
-        ref: "/documentation/modification"
-      - name: Aggregate Operations
-        ref: "/documentation/aggregation"
-      - name: Developer's Documentation
-        ref: "/documentation/developer"
-  - name: Moving Features Formats
-    ref: "/movingfeaturesformats/"
-    sub:
-        - name: Well-Known Text (WKT)
-          ref: "/movingfeaturesformats/wkt"
-        - name: Well-Known Binary (WKB)
-          ref: "/movingfeaturesformats/wkb"
-        - name: Moving-Features JSON (MF-JSON)
-          ref: "/movingfeaturesformats/mfjson"
-  - name: Tutorial Programs
-    ref: "/tutorialprograms/"
+      - name: Contributing
+        ref: "/internals/contributing"
+  - name: Examples
+    ref: "/examples/"
 
 
 

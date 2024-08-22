@@ -1,11 +1,24 @@
 {{ define "main" }}
-  {{ partial "page-header" . }}
+{{ partial "page-header" . }}
 
 
-  <article
-    class="gdoc-markdown gdoc-markdown__align--{{ default "left" (.Page.Params.geekdocAlign | lower) }}"
-  >
-    <h1>{{ partial "utils/title" . }}</h1>
-    {{ partial "utils/content" . }}
-  </article>
+<article class="gdoc-markdown gdoc-markdown__align--{{ default " left" (.Page.Params.geekdocAlign | lower) }}">
+  <h1>{{ partial "utils/title" . }}</h1>
+  {{ partial "utils/content" . }}
+</article>
+<script>
+  const codeLabels = document.querySelectorAll('input[id*="CODE"] + label')
+  // Make it so that if the id of a TABS elements is prefied with CODE, and the user selects a language, we change all other code tabs to the same language
+  const eventHandler = (event) => {
+    const selectedLanguage = event.target.textContent
+
+    for (const label of codeLabels) {
+      if (label.textContent === selectedLanguage) {
+        label.click()
+      }
+    }
+  }
+
+  document.querySelectorAll('input[id*="CODE"] + label').forEach(l => l.addEventListener("click", eventHandler))
+</script>
 {{ end }}
